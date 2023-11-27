@@ -10,6 +10,7 @@ function signUp(){
     console.log(details1);
 if(details1.Password==pass.value){
     window.location="home.html"
+    alert("Sign in Successful")
     localStorage.setItem("currentuser",JSON.stringify(details1))
 }else{
     alert("wrong password")
