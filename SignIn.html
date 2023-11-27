@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <style>
+      
+        .card1 {
+  width: fit-content;
+  height: fit-content;
+  /* background-color: rgb(238, 238, 238); */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055); */
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+ 
+}
+#cola{
+    width: 25%;
+   
+  } 
+@media screen and (max-width:600px){
+  #cola{
+    width: 70%;
+    position: relative;
+    left: 50px;
+  }     
+      } 
+
+
+    </style>
+</head>
+<body style="background-image:url('./images/1330318.png'); background-size: cover;">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div id="cola" style="border-radius: 20px;" class="col-sm-4 bg-light p-5  mt-5 ms-5 shadow">
+        <div>
+            <div>
+                <h1 class="fw-bold text-center">Sign in</h1>
+            </div>
+            <div class="p-3">
+                <label for="user" class="fw-medium">Username</label>
+                <input id="user" class="form-control" type="text">
+                <label for="email" class="fw-medium">Email</label>
+                <input id="email" class="form-control" type="email">
+                <label for="pass" class="fw-medium">password</label>
+                <input id="pass"  class="form-control" type="password">
+                <div class="text-center">
+                    <button onclick="Signin()" style="border-radius: 100px;" class="btn btn-lg btn-primary mt-3 fw-medium">Sign in</button>
+                </div>
+                <div class="mt-5">
+                  
+                          <div class="text-center">
+                            <a class=" fw-medium" href="./index.html">sign up</a>
+                          </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4"></div>
+  </div> 
+  <script src="./signin.js"></script> 
+</body>
+</html>
